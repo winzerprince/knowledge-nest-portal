@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import EventCalendar from "@/components/EventCalendar";
 import { Calendar, Clock, MapPin, User, Mail, MessageSquare } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { cn } from "@/lib/utils";
 
 const News = () => {
   const { toast } = useToast();
@@ -326,7 +327,7 @@ const News = () => {
                   />
                 </div>
                 {errors.description && (
-                  <p className="mt-1 text-sm text-destructive">{errors.description}</p>un
+                  <p className="mt-1 text-sm text-destructive">{errors.description}</p>
                 )}
               </div>
               
