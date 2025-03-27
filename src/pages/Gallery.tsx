@@ -1,7 +1,7 @@
-
-import React from "react";
+import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import ImageGallery from "@/components/ImageGallery";
+import { cn } from "@/lib/utils";
 
 const Gallery = () => {
   const galleryImages = [
@@ -42,7 +42,7 @@ const Gallery = () => {
     },
     {
       id: "img8",
-      src: "https://images.unsplash.com/photo-1506377711776-dbdc2f3c20d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      src: "https://images.unsplash.com/photo-1506377711776-bce7888c4f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       alt: "School library",
     },
     {
@@ -76,10 +76,7 @@ const Gallery = () => {
     { id: "sports", label: "Sports" },
   ];
 
-  const [activeCategory, setActiveCategory] = React.useState("all");
-
-  // In a real application, you would filter images based on category
-  // For this demo, we'll just show all images regardless of category
+  const [activeCategory, setActiveCategory] = useState("all");
 
   return (
     <Layout>

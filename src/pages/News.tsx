@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import EventCalendar from "@/components/EventCalendar";
@@ -24,7 +23,6 @@ const News = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     
-    // Clear error when user types
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -70,13 +68,11 @@ const News = () => {
       return;
     }
     
-    // Simulate form submission
     toast({
       title: "Submission Received",
       description: "Thank you for submitting your event. It will be reviewed by our team.",
     });
     
-    // Reset form
     setFormData({
       title: "",
       date: "",
